@@ -14,7 +14,7 @@ steps:
     feedsToUse: 'select'
     vstsFeed: 'my-vsts-feed' # A series of numbers and letters
 
-- script: dotnet test UnitTestProject/UnitTestProject.csproj --logger trx
+- script: dotnet test UnitTestProject/NUnitTestProject.csproj --logger trx
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
