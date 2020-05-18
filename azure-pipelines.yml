@@ -8,7 +8,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
     feedsToUse: 'select'
@@ -21,7 +21,7 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
