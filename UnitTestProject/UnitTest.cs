@@ -1,11 +1,15 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace UnitTestProject
+namespace NUnitTestProject
 {
-    [TestClass]
-    public class UnitTest
+    public class Tests
     {
-        [TestMethod]
+        [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
         public void OnePlusOneEqualsTwo()
         {
             bool IsThisTrue = (1 + 1 == 2);
@@ -13,7 +17,7 @@ namespace UnitTestProject
             Assert.AreEqual(true, IsThisTrue);
         }
 
-        [TestMethod]
+        [Test]
         public void TwoPlusTwoEqualsFour()
         {
             bool IsThisTrue = (2 + 2 == 4);
@@ -21,8 +25,8 @@ namespace UnitTestProject
             Assert.AreEqual(true, IsThisTrue);
         }
 
-        [TestMethod]
-        public void ThreePlusThreeNotEqualsSix()
+        [Test]
+        public void ThreePlusThreeEqualsSix()
         {
             bool IsThisTrue = (3 + 3 == 6);
 
